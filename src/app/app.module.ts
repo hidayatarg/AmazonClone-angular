@@ -1,3 +1,4 @@
+import { AuthGuardService } from './services/auth-guard.service';
 import { DataService } from './services/data.service';
 import { RestApiService } from './services/rest-api.service';
 import { BrowserModule } from '@angular/platform-browser';
@@ -29,7 +30,7 @@ import { LoginComponent } from './login/login.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [RestApiService, DataService],
+  providers: [RestApiService, DataService, AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
