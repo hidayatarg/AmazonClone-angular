@@ -34,17 +34,17 @@
               <a *ngIf="!token" (click)="closeDropdown(dropdown);collapse();" routerLink="/login" class="dropdown-item">
                 <i class="fa fa-key" aria-hidden="true"></i> Login
               </a>
-              <a *ngIf="token" (click)="closeDropdown(dropdown);collapse();logout();"  class="dropdown-item">
+              <a *ngIf="token" (click)="closeDropdown(dropdown);collapse();logout();" class="dropdown-item">
                 <i class="fa fa-key" aria-hidden="true"></i> Logout
               </a>
-              <a *ngIf="token" (click)="closeDropdown(dropdown); collapse();" routerLink="/register" class="dropdown-item">
+              <a *ngIf="!token" (click)="closeDropdown(dropdown); collapse();" routerLink="/register" class="dropdown-item">
                 <i class="fa fa-group" aria-hidden="true"></i> Register
               </a>
             </div>
           </li>
           <li class="nav-item ml-0 ml-md-2">
             <a (click)="collapse()" routerLink="/cart" routerLinkActive="active" class="nav-link">
-            <i class="fa fa-shopping-cart mr-1"></i> Cart
+              <i class="fa fa-shopping-cart mr-1"></i> Cart
             </a>
           </li>
         </ul>
@@ -52,9 +52,7 @@
     </div>
   </div>
 </nav>
-
 <router-outlet></router-outlet>
-
 <footer id="main-footer" class="bg-main text-white mt-5 p-5">
   <div class="container">
     <p class="lead text-center">Copyright &copy; 2019 Amazona</p>
